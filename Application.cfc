@@ -66,7 +66,7 @@
 			<cfset Request.dbBasic = CreateObject("component", "com.dbBasic").init()>
 		    <cfset Request.dbTables = CreateObject("component", "com.dbTables").init()>
 			<cfset Request.files = CreateObject("component", "com.fileFunctions").init()>
-			<cfset Request.test = CreateObject("component", "com.test").init()>
+		
 			
 			<!---<cfset Request.otherFunctions = CreateObject("component", "com.otherFunctions").init()>
 			<cfset Request.groupFile = CreateObject("component", "com.groupFileFunctions2").init()>
