@@ -578,7 +578,17 @@ $(function() {
             ul.toolbar li{
                 display:inline;                            
             }
-            ul.toolbar li a, .navigation a{ 
+            ul.toolbar li div, .navigation div{ 
+                float:left;
+                cursor:pointer;
+                width:70px;
+                height:32px;
+                opacity: 0.6;
+            }		
+            ul.toolbar li div:hover, .navigation div:hover{                
+                opacity: 1.0;
+            }
+			 ul.toolbar li a, .navigation a{ 
                 float:left;
                 cursor:pointer;
                 width:70px;
@@ -587,6 +597,12 @@ $(function() {
             }		
             ul.toolbar li a:hover, .navigation a:hover{                
                 opacity: 1.0;
+            }
+			div.tableadd{
+                background:#fff url(assets/icons/large/table_add.png) no-repeat center center;
+            }
+			div.tablecopy{
+                background:#fff url(assets/icons/large/table_multiple.png) no-repeat center center;
             }
 			a.search{
                 background:#fff url(assets/icons/large/search_accounts.png) no-repeat center center;
@@ -600,6 +616,7 @@ $(function() {
 			a.empty{
                 background:#fff url(assets/icons/large/table_refresh.png) no-repeat center center;
             }
+			
   </style>	
 		
 </head>

@@ -252,8 +252,20 @@ $(document).ready(function() {
 	<cfset theClient = Request.clients.getTheClient(clientID=#clientID#) />
 	<cfset theTableList = Request.cTableFunctions.getTableList(clientID=#clientID#) />
 	<cfset Session.clientID = #clientID# />
-
+	<div id="image_container">
+		<div class="ui-widget-header ui-corner-top">Client Tables: #theClient.clientName#</div>
+	<ul class="toolbar transparent" id="tlbar">
+		<li><div id="addTable" class="tableadd" title="Define a new table."></div></li>
+		<li><div id="copyTable" class="tablecopy" title="Copy a table."></div></li>
+	</ul>
+</div>
+<!---<div id="image_container">
 	<div class="ui-widget-header ui-corner-top">Client Tables: #theClient.clientName#</div>
+	<ul class="toolbar transparent" id="tlbar" style="display:none;">
+		<li><div id="addTable" class="tableAdded" title="Define a new table."></div></li>
+		<li><div id="copyTable" class="tableCopy" title="Copy a table."></div></li>
+	</ul>	
+</div>--->	
 	<ul>
 		<cfloop query="theTableList">
 			<!---<li>#theTableList.tableName#</li>--->
@@ -262,13 +274,7 @@ $(document).ready(function() {
 			</div></li>
 		</cfloop>
 	</ul><div id="tableList"></div>
-<!---<div id="image_container">
-	<ul class="toolbar transparent" id="tlbar" style="display:none;">
-		<li id="addTable" title="Define a new table."><img src="http://10.40.3.136/CDN/Icons/medium/table_add.png"></li>
-	</li>--->
-	<div id="addTable" title="Define a new table."><img src="assets/icons/large/table_add.png"></div>
-	<div id="copyTable" title="Copy a table."><img src="assets/icons/large/table_multiple.png"></div>
-</div>	
+	
 	
 </cfoutput>
 
