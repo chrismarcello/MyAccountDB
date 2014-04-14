@@ -27,6 +27,10 @@
 <link href="assets/lib/jQueryPluggins/jquery-layout/1.3.0/layout-default-latest.css" rel="stylesheet" type="text/css" />
 <link href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
 <link type="text/css" rel="stylesheet" href="assets/lib/jQueryPluggins/jqGrid/4.5.2/css/ui.jqgrid.css" />
+
+
+
+
 <script src="assets/lib/jQuery/jquery-1.10.1.min.js" type="text/javascript"></script>
 <script src="assets/lib/jQueryUI/1.10.1/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="assets/lib/jQueryPluggins/jquery-layout/1.3.0/jquery.layout-latest.min.js"></script>
@@ -38,7 +42,7 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="assets/lib/jQueryPluggins/jqGrid/4.5.2/js/i18n/grid.locale-en.js"></script>
 <script type="text/javascript" src="assets/lib/jQueryPluggins/jqGrid/4.5.2/js/jquery.jqGrid.min.js"></script>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.01/ace.js" type="text/javascript" charset="utf-8"></script>
 
 
 <style>
@@ -294,8 +298,10 @@ $(document).ready(function(){
 $( "#sqlScriptRun" ).click(function(){
     url = $(this).attr("href");
     dialog_box = $('<div id="sql_div" style="display:hidden"></div>').appendTo('body');
+    
     // load remote content
     dialog_box.load(url,{},function() {
+		
         dialog_box.dialog({
             close: function(){
                 $("#sql_div").remove();
@@ -397,6 +403,10 @@ $( "#sqlScriptRun" ).click(function(){
 		,	stateManagement__enabled:	true // automatic cookie load & save enabled by default
 
 	});
+	
+   
+   
+   // jqGrid Code
    
 	var tableName = '<cfoutput>#tableName#</cfoutput>';
 	
@@ -905,7 +915,8 @@ $(document).ready(function () {
                 }
             );
             });
-        </script>
+</script>
+
 		
 </body>	
 </html>
