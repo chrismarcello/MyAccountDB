@@ -140,22 +140,22 @@
                 opacity: 1.0;
             }
 			div.import{
-                background:#fff url(http://10.40.3.136/CDN/Icons/large/text_imports.png) no-repeat center center;
+                background:#fff url(./assets/icons/large/text_imports.png) no-repeat center center;
             }
             a.runSQL{
-                background:#fff url(http://10.40.3.136/CDN/Icons/large/remote_sql.png) no-repeat center center;
+                background:#fff url(./assets/icons/large/remote_sql.png) no-repeat center center;
             }
             div.createTable{
-                background:#fff url(http://10.40.3.136/CDN/Icons/large/table_lightning.png) no-repeat center center;
+                background:#fff url(./assets/icons/large/table_lightning.png) no-repeat center center;
             }
 			div.tableDelete{
-                background:#fff url(http://10.40.3.136/CDN/Icons/large/table_delete.png) no-repeat center center;
+                background:#fff url(./assets/icons/large/table_delete.png) no-repeat center center;
             }
 			div.tableExportText{
-                background:#fff url(http://10.40.3.136/CDN/Icons/large/text_exports.png) no-repeat center center;
+                background:#fff url(./assets/icons/large/text_exports.png) no-repeat center center;
             }
 			div.tableExportExcel{
-                background:#fff url(http://10.40.3.136/CDN/Icons/large/table_excel.png) no-repeat center center;
+                background:#fff url(./assets/icons/large/table_excel.png) no-repeat center center;
             }
   </style>
 <script type="text/javascript">
@@ -777,7 +777,7 @@ $(document).ready(function () {
                 	<cfset theFileDelimiter = Request.files.getDelimiters() />
 									<cfloop query="theFileDelimiter">
 				<cfoutput>
-                	<li><img src="../#theFileDelimiter.fileDelimIcon#" alt="#UCase(theFileDelimiter.fileDelimName)#" title="#UCase(theFileDelimiter.fileDelimName)#" border="0">
+                	<li><img src="./#theFileDelimiter.fileDelimIcon#" alt="#UCase(theFileDelimiter.fileDelimName)#" title="#UCase(theFileDelimiter.fileDelimName)#" border="0">
 						<cfif theFileDelimiter.fileDelimDefault EQ 1>
 							<input type="radio" name="delimiter" id="delimiter" value="#theFileDelimiter.fileDelimID#" checked="checked">
 							<cfelse>
